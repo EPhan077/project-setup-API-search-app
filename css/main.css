@@ -145,7 +145,7 @@ form {
 
 .search {
   position: relative; }
-  .search .search .fa-search {
+  .search .fa-search {
     position: absolute;
     font-size: 2.2rem;
     opacity: .3;
