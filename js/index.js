@@ -15,6 +15,7 @@ function getApiData(searchTerm, callback) {
     $.getJSON(MD_BASE_URL, query, callback);
 }
 
+// Render functions
 function displayMDSearchData(data) {
     
     var resultElement = '';
@@ -52,7 +53,7 @@ function displayMDSearchData(data) {
     $('.js-search-results').html(resultElement);
 }
 
-// event listeners
+// Event listeners
 function watchSubmit() {
   $('.js-search-form').submit(function(e) {
     e.preventDefault();

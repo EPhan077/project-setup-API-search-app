@@ -145,11 +145,11 @@ form {
 
 .search {
   position: relative; }
-  .search .search .fa-search {
+  .search .fa-search {
     position: absolute;
     font-size: 2.2rem;
     opacity: .3;
-    top: 6px;
+    top: 7px;
     right: 10px; }
 
 input[type=text] {
