@@ -1,3 +1,68 @@
-<h1>This is an example</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<p>It should be rendered on gh-pages</p>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width">
+  <link rel ="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>Movies Search</title>
+</head>
+
+<body>
+    
+<!-----*** HEADER ***----->    
+<header>
+    <div class="clearfix">
+        <nav>
+            <!-- LOGO -->
+            <h1>MovieBox Logo</h1>
+            <!-- NAV LINKS -->
+            <ul class="main-nav">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- SEARCH FORM -->
+    <form action="#" class="js-search-form">
+        <p class="form-p">Search for movies by Title</p>
+
+        <div class="search">
+        <span class="fa fa-search"></span>
+        <input type="text" class="js-query" placeholder="ex. Star Wars" autofocus>
+        </div>
+        
+        <button id="ghost-btn" type="submit">Submit</button>
+    </form>
+</header>
+    
+<!-----*** SECTION - SEARCH RESULTS ***-----> 
+<section class="js-search-results clearfix">
+ 
+</section>
+
+<!-----*** SECTION - VIEW MORE ***----->
+<section>
+        <p class="max center-text">Showing max result of 20</p>
+        <p class="center-text">
+        <a class="btn second-btn" href="https://www.imdb.com/find" target="_blank">View More Details on IMDB</a>
+        </p>
+</section>
+
+<!-----*** FOOTER ***----->
+<footer>Built by Eileen Villahermosa for DWS2</footer>  
+    
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script> 
+<script src="js/index.js"></script>
+    
+</body>
+    
+</html>

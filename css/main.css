@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption");
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+h2, body, section, article, footer, form {
+  margin: 0 auto; }
+
+.no-results, .center-text, footer, ul, form .form-p {
+  text-align: center; }
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: table; }
+
+h1 {
+  background: url(../img/movie-logo.png) no-repeat;
+  background-size: 80%;
+  font-family: "PT Sans", Arial, sans-serif;
+  text-indent: -9999px;
+  color: #FFF;
+  float: left;
+  padding-bottom: 1rem;
+  margin: .5rem 0 0 4rem;
+  height: 50px;
+  width: 230px; }
+
+h2 span {
+  background-color: #222;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 1.6rem;
+  color: #FFF;
+  text-transform: capitalize;
+  display: inline-block;
+  padding: .8rem; }
+
+h3 {
+  font-family: "PT Sans Caption", Arial, sans-serif;
+  font-size: 1rem;
+  color: #F6A623;
+  margin-top: 0;
+  padding: 1rem; }
+
+article p {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 1rem;
+  color: #FFF;
+  padding: 0 0 1rem 1rem;
+  opacity: .7; }
+
+.no-results {
+  font-family: "PT Sans Caption", Arial, sans-serif;
+  font-size: 1.6rem;
+  color: #F6A623; }
+
+.max {
+  font-family: "PT Sans Caption", Arial, sans-serif;
+  font-size: 1rem;
+  color: #ccc;
+  padding-bottom: 1rem; }
+
+.center-text {
+  font-size: 1rem; }
+
+html {
+  background-color: #EEE;
+  height: 100%; }
+
+body {
+  width: 100%;
+  max-width: 1100px; }
+
+header {
+  background: linear-gradient(rgba(0, 7, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/movie.jpg") no-repeat center center;
+  background-size: 100%;
+  height: 335px;
+  overflow-y: hidden;
+  position: relative; }
+
+section {
+  height: auto;
+  margin-top: 3rem;
+  width: 90%; }
+
+.container {
+  width: 95%;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  height: 390px;
+  background-color: #222; }
+
+article {
+  margin-top: 1rem;
+  width: calc(100%/4);
+  float: left; }
+
+article img {
+  width: 100%;
+  height: 300px; }
+
+footer {
+  background-color: #222;
+  font-family: "PT Sans Caption", Arial, sans-serif;
+  color: #FFF;
+  margin-top: 5rem;
+  padding: 2rem 0; }
+
+ul {
+  list-style: none;
+  float: right;
+  margin: .1rem 4rem 0 0; }
+
+li {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 1rem; }
+
+a {
+  color: #FFF;
+  text-decoration: none;
+  opacity: .5;
+  transition: opacity 0.5s; }
+
+a:hover {
+  color: #F6A623;
+  opacity: 1; }
+
+form {
+  margin-top: 5rem;
+  width: 60%; }
+  form .form-p {
+    background-color: #222;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 1rem;
+    color: #FFF;
+    padding: .3rem;
+    margin: 3rem 0 0 0;
+    width: 200px;
+    position: relative; }
+
+::placeholder {
+  font-family: "PT Sans Caption", Arial, sans-serif;
+  font-size: 1.4rem;
+  color: #222;
+  opacity: .5; }
+
+.search {
+  position: relative; }
+  .search .search .fa-search {
+    position: absolute;
+    font-size: 2.2rem;
+    opacity: .3;
+    top: 6px;
+    right: 10px; }
+
+input[type=text] {
+  background: #FFF no-repeat;
+  background-position: 10px 10px;
+  font-family: "PT Sans Caption", Arial, sans-serif;
+  font-size: 1.4rem;
+  color: #222;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 12px 20px 12px 20px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out; }
+
+#ghost-btn {
+  visibility: hidden;
+  text-indent: -9999px; }
+
+.btn {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 1rem;
+  color: #FFF;
+  text-decoration: none;
+  border: none;
+  padding: 1rem;
+  display: inline-block;
+  border-radius: .5em;
+  transition: background-color 0.5s; }
+
+.second-btn {
+  background-color: #F6A623;
+  border: 0.2rem solid #F6A623;
+  opacity: 1; }
+  .second-btn:hover {
+    background-color: #FFF;
+    color: #F6A623; }

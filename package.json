@@ -1,0 +1,26 @@
+{
+  "name": "project-setup-api-search-app",
+  "version": "1.0.0",
+  "description": "Project to create an API search app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EPhan077/project-setup-API-search-app.git"
+  },
+  "author": "EV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EPhan077/project-setup-API-search-app/issues"
+  },
+  "homepage": "https://github.com/EPhan077/project-setup-API-search-app#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.24.7"
+  }
+}

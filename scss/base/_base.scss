@@ -1,0 +1,120 @@
+// Base
+
+// Clear
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+// Typography
+h1 {
+    background: url(../img/movie-logo.png) no-repeat;
+    background-size: 80%;
+    font-family: $font-stack-secondary;
+    text-indent: -9999px;
+    color: $primary-color;
+    float: left;
+    padding-bottom: 1rem;
+    margin: .5rem 0 0 4rem;
+    height: 50px;
+    width: 230px;
+}
+
+h2 {
+    @extend %center-element;
+}
+
+h2 span {
+    background-color: #222;
+    @include font($font-stack-secondary, 1.6rem, $primary-color);
+    text-transform: capitalize;
+    display: inline-block;
+    padding: .8rem;
+}
+
+h3 {
+    @include font($font-stack-primary, $p-font-size, $secondary-color);
+    margin-top: 0;
+    padding: 1rem;
+}
+
+article p {
+    @include font($font-stack-secondary, $p-font-size, $primary-color);
+    padding: 0 0 1rem 1rem;
+    opacity: .7;
+}
+
+.no-results {
+    @include font($font-stack-primary, 1.6rem, $secondary-color);
+    @extend %center-text;
+}
+
+.max {
+    @include font($font-stack-primary, 1rem, #ccc);
+    padding-bottom: 1rem;
+}
+
+.center-text {
+    @extend %center-text;
+    font-size: $p-font-size;
+}
+
+
+// Structure
+html {
+    background-color: $neutral-color;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    max-width: 1100px;
+    @extend %center-element;
+}
+
+header {
+    background: linear-gradient(rgba(0, 7, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/movie.jpg') no-repeat center center;
+    background-size: 100%;
+    height: 335px;
+    overflow-y: hidden;
+    position: relative;
+}
+
+section {
+    height: auto;
+    margin-top: 3rem;
+    width: 90%;
+    @extend %center-element;
+}
+
+.container {
+    width: 95%;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    height: 390px;
+    background-color: #222
+}
+
+article {
+    margin-top: 1rem;
+    width: calc(100%/4);
+    float: left;
+    @extend %center-element;
+}
+
+article img {
+    width: 100%;
+    height: 300px;
+}
+
+footer {
+    background-color: $bckgnd-color;
+    font-family: $font-stack-primary;
+    color: $primary-color;
+    @extend %center-text;
+    @extend %center-element;
+    margin-top: 5rem;
+    padding: 2rem 0;
+}

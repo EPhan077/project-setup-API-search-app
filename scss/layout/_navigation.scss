@@ -1,0 +1,27 @@
+// Navigation
+
+ul {
+    list-style: none;
+    float: right;
+    @extend %center-text;
+    margin: .1rem 4rem 0 0;
+}
+
+li {
+    font-family: $font-stack-secondary;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 1rem;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+    opacity: .5;
+    transition: opacity 0.5s;
+}
+
+a:hover {
+    color: $secondary-color;
+    opacity: 1;
+}

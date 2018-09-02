@@ -1,0 +1,26 @@
+// Button
+#ghost-btn {
+    visibility: hidden;
+    text-indent: -9999px;
+}
+
+.btn {
+    @include font($font-stack-secondary, $p-font-size, $primary-color);
+    text-decoration: none;
+    border: none;
+    padding: 1rem;
+    display: inline-block;
+    border-radius: .5em;
+    transition: background-color 0.5s;
+}
+
+.second-btn {
+    background-color: $secondary-color;
+    border: .2rem solid $secondary-color;
+    opacity: 1;
+    
+    &:hover {
+    background-color: $primary-color;
+    color: $secondary-color;
+    }
+}

@@ -1,0 +1,51 @@
+// Form
+
+form {
+    margin-top: 5rem;
+    width: 60%;
+    @extend %center-element;
+    
+    .form-p {
+    background-color: $bckgnd-color;
+    @include font($font-stack-secondary, $p-font-size, $primary-color);
+    @extend %center-text;
+    padding: .3rem;
+    margin: 3rem 0 0 0;
+    width: 200px;
+    position: relative;
+    }
+}
+
+::placeholder {
+    @include font($font-stack-primary, 1.4rem, #222);
+    opacity: .5;
+}
+
+.search {
+    position: relative;
+    
+    .search .fa-search { 
+    position: absolute;
+    font-size: 2.2rem;
+    opacity: .3;
+    top: 6px;
+    right: 10px;
+    }
+}
+ 
+input[type=text] {
+    background: $primary-color no-repeat;
+    background-position: 10px 10px;
+    @include font($font-stack-primary, 1.4rem, #222);
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 12px 20px 12px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+
+
+
