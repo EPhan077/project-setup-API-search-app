@@ -25,4 +25,4 @@ A gulp file was created to handle compiling the scss files.
 
 [MovieBox](https://ephan077.github.io/project-setup-API-search-app/). If you'd like to run this locally please clone or download.
 
-![Screenshot of Todoist Desktop](img/clone.png)
+![Screenshot of image clone](img/clone.png)
