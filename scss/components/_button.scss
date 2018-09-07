@@ -1,7 +1,8 @@
 // Button
-#ghost-btn {
-    visibility: hidden;
-    text-indent: -9999px;
+.ghost-btn {
+  position: absolute;
+  top: 11rem;
+  right: 14rem;
 }
 
 .btn {
