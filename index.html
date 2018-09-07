@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel ="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/main.css" />
   <title>Movie Box</title>
@@ -33,14 +33,12 @@
     </div>
     <!-- SEARCH FORM -->
     <form action="#" class="js-search-form">
-        <p class="form-p">Search for movies by Title</p>
-
         <div class="search">
-        <span class="fa fa-search"></span>
-        <input type="text" class="js-query" placeholder="ex. Star Wars" autofocus>
+        <!--<span class="fa fa-search"></span>-->
+        <label class="form-p" for="searchTerm">Search for movies by Title</label>
+        <input type="text" class="js-query" id="searchTerm" placeholder="ex. Star Wars" autofocus>
         </div>
-        
-        <button id="ghost-btn" type="submit">Submit</button>
+        <button class="ghost-btn" type="submit">Submit</button>
     </form>
 </header>
     
@@ -60,7 +58,7 @@
 <!-----*** FOOTER ***----->
 <footer>Built by Eileen Villahermosa for DWS2</footer>  
     
-<script src="https://code.jquery.com/jquery-3.1.0.js"></script> 
+<!--<script src="https://code.jquery.com/jquery-3.1.0.js"></script> -->
 <script src="js/index.js"></script>
     
 </body>
