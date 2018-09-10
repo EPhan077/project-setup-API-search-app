@@ -32,6 +32,6 @@ gulp.task('browser-sync', function() {
           })
 })
 
-gulp.task('watch', gulp.parallel('browser-sync', 'scss',function() {
-    gulp.watch(scss, gulp.parallel('scss'))
-}))
+gulp.task('watch', ['browser-sync', 'scss'], function() {
+    gulp.watch(scss, ['scss'])
+})
