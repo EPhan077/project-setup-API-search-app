@@ -17,20 +17,17 @@
         <nav>
             <!-- LOGO -->
             <h1>MovieBox Logo</h1>
-            <!-- NAV LINKS -->
-            <ul class="main-nav">
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
+
+            <div class="topnav" id="myTopnav">
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+              <a href="javascript:void(0);" class="menu-icon" id="menu"></a>
+            </div>
         </nav>
+
     </div>
+    
     <!-- SEARCH FORM -->
     <form action="#" class="js-search-form">
         <div class="search">
@@ -38,7 +35,7 @@
         <label class="form-p" for="searchTerm">Search for movies by Title</label>
         <input type="text" class="js-query" id="searchTerm" placeholder="ex. Star Wars" autofocus>
         </div>
-        <button class="ghost-btn" type="submit">Submit</button>
+        <button type="submit">Submit</button>
     </form>
 </header>
     
@@ -57,9 +54,10 @@
 
 <!-----*** FOOTER ***----->
 <footer>Built by Eileen Villahermosa for DWS2</footer>  
-    
-<!--<script src="https://code.jquery.com/jquery-3.1.0.js"></script> -->
-<script src="js/index.js"></script>
+
+<script src="js/index.js"></script>   
+<script src="js/event.js"></script>   
+
     
 </body>
     

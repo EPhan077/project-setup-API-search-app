@@ -1,10 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption");
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
-h2, body, section, article, footer, form {
-  margin: 0 auto; }
-
-.no-results, .center-text, footer, ul, form .form-p {
-  text-align: center; }
+h2, body, section, footer, form {
+  margin-left: auto;
+  margin-right: auto; }
 
 .clearfix:after {
   content: "";
@@ -16,12 +14,26 @@ h1 {
   background-size: 80%;
   font-family: "PT Sans", Arial, sans-serif;
   text-indent: -9999px;
-  color: #FFF;
   float: left;
+  color: #FFF;
   padding-bottom: 1rem;
-  margin: .5rem 0 0 4rem;
   height: 50px;
-  width: 230px; }
+  width: 230px;
+  margin: .5rem 4rem; }
+  @media (min-width: 700px) {
+    h1 {
+      background-size: 60%;
+      margin-right: 4rem; } }
+
+h2 {
+  background-color: #222;
+  width: 100%; }
+  @media (min-width: 700px) {
+    h2 {
+      margin-top: 1rem;
+      background: none;
+      width: 89%;
+      margin-bottom: .5rem; } }
 
 h2 span {
   background-color: #222;
@@ -34,22 +46,32 @@ h2 span {
 
 h3 {
   font-family: "PT Sans Caption", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: #F6A623;
   margin-top: 0;
-  padding: 1rem; }
+  padding: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+  @media (min-width: 500px) {
+    h3 {
+      font-size: 1rem; } }
 
 article p {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 1rem;
   color: #FFF;
-  padding: 0 0 1rem 1rem;
-  opacity: .7; }
+  opacity: .7;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0 0 1rem 1rem; }
 
 .no-results {
   font-family: "PT Sans Caption", Arial, sans-serif;
   font-size: 1.6rem;
-  color: #F6A623; }
+  color: #F6A623;
+  text-align: center; }
 
 .max {
   font-family: "PT Sans Caption", Arial, sans-serif;
@@ -58,6 +80,7 @@ article p {
   padding-bottom: 1rem; }
 
 .center-text {
+  text-align: center;
   font-size: 1rem; }
 
 html {
@@ -66,93 +89,180 @@ html {
 
 body {
   width: 100%;
-  max-width: 1100px; }
+  max-width: 1200px; }
 
 header {
   background: linear-gradient(rgba(0, 7, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/movie.jpg") no-repeat center center;
   background-size: 100%;
-  height: 335px;
+  height: 270px;
   overflow-y: hidden;
   position: relative; }
+  @media (min-width: 700px) {
+    header {
+      height: 300px; } }
 
 section {
   height: auto;
-  margin-top: 3rem;
-  width: 90%; }
+  margin-top: 1rem;
+  max-width: 100%; }
+  @media (min-width: 700px) {
+    section {
+      width: 90%; } }
+
+.js-search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .js-search-results .item {
+    width: 95%; }
+    @media (min-width: 500px) {
+      .js-search-results .item {
+        background-color: #222;
+        min-height: 350px;
+        margin: .35rem;
+        width: 40%; } }
+    @media (min-width: 700px) {
+      .js-search-results .item {
+        width: 31.83%;
+        min-height: 320px; } }
+    @media (min-width: 1000px) {
+      .js-search-results .item {
+        width: 23.81%; } }
 
 .container {
-  width: 95%;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  height: 390px;
-  background-color: #222; }
+  margin-bottom: 1rem; }
 
-article {
-  margin-top: 1rem;
-  width: calc(100%/4);
-  float: left; }
+.content {
+  background-color: #222;
+  height: 150px; }
+  @media (min-width: 500px) {
+    .content {
+      background-color: #222;
+      width: 100%;
+      height: 80px; } }
 
 article img {
-  width: 100%;
-  height: 300px; }
+  float: left;
+  height: 150px;
+  width: 30%; }
+  @media (min-width: 500px) {
+    article img {
+      width: 100%;
+      height: 280px; } }
+  @media (min-width: 700px) {
+    article img {
+      height: 220px; } }
 
 footer {
   background-color: #222;
   font-family: "PT Sans Caption", Arial, sans-serif;
   color: #FFF;
+  text-align: center;
   margin-top: 5rem;
   padding: 2rem 0; }
 
-ul {
-  list-style: none;
-  float: right;
-  margin: .1rem 4rem 0 0; }
+.topnav {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; }
 
-li {
+.topnav a:first-of-type {
+  margin-top: 4rem; }
+
+.topnav a {
+  display: none;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 1.2rem;
-  display: inline-block;
-  padding: 1rem; }
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; }
 
-a {
-  color: #FFF;
-  text-decoration: none;
-  opacity: .5;
-  transition: opacity 0.5s; }
+.topnav a:hover {
+  color: #F6A623; }
 
-a:hover {
-  color: #F6A623;
-  opacity: 1; }
+.topnav .menu-icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: .5rem;
+  margin-right: 1rem;
+  width: 40px;
+  height: 40px;
+  background: url("../img/hamburger.png") no-repeat center;
+  background-size: 60%; }
+
+.topnav.responsive {
+  padding-bottom: 3rem;
+  position: absolute;
+  background-color: #222;
+  width: 100%;
+  z-index: 1; }
+
+.topnav.responsive .menu-icon {
+  background: url("../img/close.png") no-repeat center;
+  background-size: 60%; }
+
+.topnav.responsive a {
+  display: block;
+  text-align: right;
+  font-size: 1.6rem; }
+
+@media only screen and (min-width: 700px) {
+  .topnav {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-right: 4rem; }
+  .topnav a {
+    display: block; }
+  .topnav a:first-of-type {
+    margin-top: 0; }
+  .topnav .menu-icon {
+    display: none; } }
 
 form {
   margin-top: 5rem;
-  width: 60%; }
+  width: 80%; }
+  @media (min-width: 700px) {
+    form {
+      margin-top: 3rem;
+      width: 60%; } }
   form .form-p {
-    background-color: #222;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 1rem;
     color: #FFF;
+    text-align: center;
     padding: .3rem;
     margin: 3rem 0 0 0;
     width: 200px;
     position: relative; }
+    @media (min-width: 700px) {
+      form .form-p {
+        background-color: #222; } }
 
 ::placeholder {
   font-family: "PT Sans Caption", Arial, sans-serif;
   font-size: 1.4rem;
   color: #222;
   opacity: .5; }
+  @media (min-width: 700px) {
+    ::placeholder {
+      font-size: 1.6rem; } }
 
 .search {
-  position: relative; }
-  .search .fa-search {
-    position: absolute;
-    font-size: 2.2rem;
-    opacity: .3;
-    top: 7px;
-    right: 10px; }
+  position: relative;
+  padding-top: .3rem;
+  background-color: #222;
+  text-align: center; }
+  @media (min-width: 700px) {
+    .search {
+      background: none;
+      text-align: left; } }
 
 input[type=text] {
+  margin-top: .5rem;
   background: #FFF no-repeat;
   background-position: 10px 10px;
   font-family: "PT Sans Caption", Arial, sans-serif;
@@ -166,10 +276,40 @@ input[type=text] {
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out; }
 
-.ghost-btn {
+button {
   position: absolute;
-  top: 11rem;
-  right: 14rem; }
+  top: 11.5rem;
+  right: 5rem;
+  text-indent: -9999px;
+  width: 40px;
+  height: 40px;
+  background: url("../img/search.png") no-repeat center;
+  background-size: 80%; }
+  @media (min-width: 500px) {
+    button {
+      right: 4rem; } }
+  @media (min-width: 600px) {
+    button {
+      right: 5rem; } }
+  @media (min-width: 700px) {
+    button {
+      top: 9.5rem;
+      right: 10rem; } }
+  @media (min-width: 800px) {
+    button {
+      right: 11rem; } }
+  @media (min-width: 900px) {
+    button {
+      right: 12.5rem; } }
+  @media (min-width: 1000px) {
+    button {
+      right: 14rem; } }
+  @media (min-width: 1100px) {
+    button {
+      right: 15rem; } }
+  @media (min-width: 1200px) {
+    button {
+      right: 16rem; } }
 
 .btn {
   font-family: "PT Sans", Arial, sans-serif;
@@ -183,9 +323,14 @@ input[type=text] {
   transition: background-color 0.5s; }
 
 .second-btn {
+  width: 91%;
   background-color: #F6A623;
   border: 0.2rem solid #F6A623;
   opacity: 1; }
   .second-btn:hover {
     background-color: #FFF;
     color: #F6A623; }
+
+@media (min-width: 700px) {
+  .second-btn {
+    width: auto; } }

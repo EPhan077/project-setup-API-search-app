@@ -1,3 +1,4 @@
+
 // Base
 
 // Clear
@@ -14,16 +15,31 @@ h1 {
     background-size: 80%;
     font-family: $font-stack-secondary;
     text-indent: -9999px;
-    color: $primary-color;
     float: left;
+    color: $primary-color;
     padding-bottom: 1rem;
-    margin: .5rem 0 0 4rem;
     height: 50px;
     width: 230px;
+    margin: .5rem 4rem;
+
+    
+    @media #{$medium} {
+      background-size: 60%;
+      margin-right: 4rem;
+    }
 }
 
 h2 {
     @extend %center-element;
+    background-color: #222;
+    width: 100%;
+
+    @media #{$medium} {
+      margin-top: 1rem;
+      background: none;
+      width: 89%;
+      margin-bottom: .5rem;
+    }
 }
 
 h2 span {
@@ -32,23 +48,35 @@ h2 span {
     text-transform: capitalize;
     display: inline-block;
     padding: .8rem;
+
 }
 
 h3 {
-    @include font($font-stack-primary, $p-font-size, $secondary-color);
+    @include font($font-stack-primary, 1.4rem, $secondary-color);
     margin-top: 0;
     padding: 1rem;
+    text-overflow: ellipsis; 
+    overflow: hidden; 
+    white-space: nowrap;
+    
+    @media #{$small} {
+      font-size: $p-font-size;
+    }
 }
 
 article p {
-    @include font($font-stack-secondary, $p-font-size, $primary-color);
-    padding: 0 0 1rem 1rem;
+    @include font($font-stack-secondary, 1rem, $primary-color);
     opacity: .7;
+    text-overflow: ellipsis; 
+    overflow: hidden; 
+    white-space: nowrap;
+    padding: 0 0 1rem 1rem;
+    
 }
 
 .no-results {
     @include font($font-stack-primary, 1.6rem, $secondary-color);
-    @extend %center-text;
+    text-align: center;
 }
 
 .max {
@@ -57,7 +85,7 @@ article p {
 }
 
 .center-text {
-    @extend %center-text;
+    text-align: center;
     font-size: $p-font-size;
 }
 
@@ -70,51 +98,98 @@ html {
 
 body {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
     @extend %center-element;
 }
 
 header {
     background: linear-gradient(rgba(0, 7, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/movie.jpg') no-repeat center center;
     background-size: 100%;
-    height: 335px;
+    height: 270px;
     overflow-y: hidden;
     position: relative;
+    
+    @media #{$medium} {
+      height: 300px;
+    }
 }
 
 section {
     height: auto;
-    margin-top: 3rem;
-    width: 90%;
+    margin-top: 1rem;
+    max-width: 100%;
     @extend %center-element;
+    
+    @media #{$medium} {
+      width: 90%;
+    }
+    
+}
+
+.js-search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    .item {
+    width: 95%;
+        
+    @media #{$small} {
+    background-color: #222;
+    min-height: 350px;
+    margin: .35rem;
+    width: 40%; 
+    }
+        
+    @media #{$medium} {
+    width: 31.83%;
+    min-height: 320px;
+    }
+
+    @media #{$large} {
+    width: 23.81%; 
+    }
+}
 }
 
 .container {
-    width: 95%;
     margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    height: 390px;
-    background-color: #222
 }
 
-article {
-    margin-top: 1rem;
-    width: calc(100%/4);
-    float: left;
-    @extend %center-element;
+
+.content {
+    background-color: #222;
+    height: 150px;
+    
+    @media #{$small} {
+      background-color: #222;
+      width: 100%;
+      height: 80px;
+    }
 }
 
 article img {
-    width: 100%;
-    height: 300px;
+    float: left;
+    height: 150px;
+    width: 30%;
+    
+    @media #{$small} {
+      width: 100%;
+      height: 280px;
+    }
+    
+    @media #{$medium} {
+      height: 220px;
+    }
 }
 
 footer {
     background-color: $bckgnd-color;
     font-family: $font-stack-primary;
     color: $primary-color;
-    @extend %center-text;
+    text-align: center;
     @extend %center-element;
     margin-top: 5rem;
     padding: 2rem 0;
 }
+

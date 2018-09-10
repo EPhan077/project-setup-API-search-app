@@ -2,38 +2,54 @@
 
 form {
     margin-top: 5rem;
-    width: 60%;
+    width: 80%;
     @extend %center-element;
     
+    @media #{$medium} {
+      margin-top: 3rem;
+      width: 60%;
+    }
+    
     .form-p {
-    background-color: $bckgnd-color;
+
     @include font($font-stack-secondary, $p-font-size, $primary-color);
-    @extend %center-text;
+    text-align: center;
     padding: .3rem;
     margin: 3rem 0 0 0;
     width: 200px;
     position: relative;
+        
+    @media #{$medium} {
+        background-color: $bckgnd-color;
+    }
+    
     }
 }
+
 
 ::placeholder {
     @include font($font-stack-primary, 1.4rem, #222);
     opacity: .5;
+    
+    @media #{$medium} {
+        font-size: $input-font-size;
+    }
+    
 }
-
 .search {
     position: relative;
+    padding-top: .3rem;
+    background-color: $bckgnd-color;
+    text-align: center;
     
-    .fa-search { 
-    position: absolute;
-    font-size: 2.2rem;
-    opacity: .3;
-    top: 7px;
-    right: 10px;
+    @media #{$medium} {
+      background: none;
+      text-align: left;
     }
 }
  
 input[type=text] {
+    margin-top: .5rem;
     background: $primary-color no-repeat;
     background-position: 10px 10px;
     @include font($font-stack-primary, 1.4rem, #222);
