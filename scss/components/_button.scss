@@ -1,8 +1,48 @@
 // Button
-.ghost-btn {
+
+
+button {
   position: absolute;
-  top: 11rem;
-  right: 14rem;
+  top: 11.5rem;
+  right: 5rem;
+  text-indent: -9999px;
+  width: 40px;
+  height: 40px;
+  background: url('../img/search.png') no-repeat center;
+  background-size: 80%;
+    
+    @media #{$small} {
+      right: 4rem;
+    }
+    
+    @media (min-width: 600px) {
+        right: 5rem;
+    }
+    
+    @media #{$medium} {
+       top: 9.5rem;
+       right: 10rem;
+    } 
+    
+    @media (min-width: 800px) {
+       right: 11rem;
+    }
+    
+    @media (min-width: 900px) {
+       right: 12.5rem;
+    }  
+    
+    @media #{$large} {
+       right: 14rem;
+    } 
+    
+    @media (min-width: 1100px) {
+       right: 15rem;
+    }  
+
+    @media (min-width: 1200px) {
+       right: 16rem;
+    }  
 }
 
 .btn {
@@ -16,6 +56,7 @@
 }
 
 .second-btn {
+    width: 91%;
     background-color: $secondary-color;
     border: .2rem solid $secondary-color;
     opacity: 1;
@@ -23,5 +64,11 @@
     &:hover {
     background-color: $primary-color;
     color: $secondary-color;
+    }
+}
+
+@media (min-width: 700px) {
+    .second-btn {
+        width: auto;
     }
 }

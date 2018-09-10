@@ -1,27 +1,70 @@
 // Navigation
-
-ul {
-    list-style: none;
-    float: right;
-    @extend %center-text;
-    margin: .1rem 4rem 0 0;
+.topnav {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-li {
-    font-family: $font-stack-secondary;
-    font-size: 1.2rem;
-    display: inline-block;
-    padding: 1rem;
+.topnav a:first-of-type {margin-top: 4rem;}
+
+.topnav a {
+  display: none;
+  font-family: $font-stack-secondary;
+  font-size: 1.2rem;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-a {
-    color: $primary-color;
-    text-decoration: none;
-    opacity: .5;
-    transition: opacity 0.5s;
+.topnav a:hover {color: #F6A623;
 }
 
-a:hover {
-    color: $secondary-color;
-    opacity: 1;
+.topnav .menu-icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: .5rem;
+    margin-right: 1rem;
+	width: 40px;
+	height: 40px;
+	background: url('../img/hamburger.png') no-repeat center;
+    background-size: 60%;
+
+}
+
+.topnav.responsive {
+    padding-bottom: 3rem;
+    position: absolute; 
+    background-color: #222; 
+    width: 100%; 
+    z-index:1; 
+}
+
+.topnav.responsive .menu-icon {
+    background: url('../img/close.png') no-repeat center;
+    background-size: 60%;
+  }
+
+.topnav.responsive a {
+    display: block;
+    text-align: right;
+    font-size: 1.6rem;
+  }
+
+@media only screen and #{$medium} {
+    
+    .topnav {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+      margin-right: 4rem;
+     }
+    
+    .topnav a {display: block;}
+    
+    .topnav a:first-of-type {margin-top: 0;}
+    
+    .topnav .menu-icon {display: none;}
 }
